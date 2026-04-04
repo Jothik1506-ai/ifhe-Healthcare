@@ -1,0 +1,160 @@
+.download-qr-container {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.controls-panel {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-group label {
+    font-weight: 600;
+    color: #555;
+}
+
+.control-group select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    cursor: pointer;
+    background-color: white;
+}
+
+.print-all-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.print-all-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Screen Preview Styles */
+.qr-grid-preview-wrapper {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.qr-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    min-height: 200px;
+    /* Min height for preview */
+}
+
+.qr-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    flex: 1;
+}
+
+.qr-image-container img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.qr-details {
+    text-align: center;
+    width: 100%;
+}
+
+.qr-book-no {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #333;
+}
+
+.qr-name {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.loading-container {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Print Styles are mostly handled dynamically in JSX, but we need to hide non-print elements */
+@media print {
+    body * {
+        visibility: visible !important;
+    }
+
+    .navbar,
+    .footer,
+    .no-print,
+    .header-actions {
+        display: none !important;
+    }
+
+    .download-qr-container {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: none;
+    }
+
+    .qr-grid-preview-wrapper {
+        padding: 0;
+        background: transparent;
+        border: none;
+    }
+
+    /* Reset some screen-only styles */
+    .qr-card {
+        box-shadow: none;
+        border-radius: 0;
+        min-height: 0;
+    }
+}

@@ -1,0 +1,133 @@
+.doctor-assigning-container {
+  background-color: #f5f5f5;
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.doctor-assigning-title {
+  color: #333;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.doctor-assigning-success-msg {
+  background: #66bca15d;
+  color: #176101;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.doctor-assigning-error-msg {
+  background-color: #fb9ea6;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.doctor-assigning-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.doctor-assigning-form-group {
+  margin-bottom: 15px;
+}
+
+.doctor-assigning-form-group label {
+  display: block;
+  margin-bottom: 3px;
+  color: #333;
+  font-weight: bold;
+}
+
+.doctor-assigning-form-group input[type="number"],
+.doctor-assigning-form-group input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.doctor-assigning-radio-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  margin-top: 5px;
+  white-space: nowrap;
+}
+
+.doctor-assigning-radio-group label {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.doctor-assigning-radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+.doctor-assigning-submit-btn {
+  width: 100%;
+  background-color: #373737;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.doctor-assigning-submit-btn:hover {
+  background-color: #0c0c0c;
+}
+
+@media screen and (max-width: 600px) {
+  .doctor-assigning-container {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  .doctor-assigning-form {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .doctor-assigning-form-group input[type="number"],
+  .doctor-assigning-form-group input[type="text"] {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .doctor-assigning-submit-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .doctor-assigning-title {
+    font-size: 1.5rem;
+  }
+
+  .doctor-assigning-radio-group {
+    gap: 8px;
+  }
+
+  .doctor-assigning-radio-group label {
+    font-size: 1rem;
+  }
+}

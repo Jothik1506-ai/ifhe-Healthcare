@@ -1,0 +1,50 @@
+.verify-medicine-container {
+  background-color: #f5f5f5;
+  max-width: 600px; /* Increased to accommodate horizontal cards */
+  margin: 35px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.verify-pickup-card{
+  margin: 0px 20px 0px; /* Reduced side margins to allow more space for horizontal cards */
+  padding: 0px 60px;
+}
+
+.verify-medicine-title {
+  color: #333;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.verify-medicine-form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.verify-medicine-form-group {
+  margin-bottom: 15px;
+}
+
+.verify-medicine-form-group label {
+  display: block;
+  margin-bottom: 3px;
+  color: #333;
+  font-weight: bold;
+}
+
+.verify-medicine-form-group input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.verify-medicine-btn-container {
+  text-align: center;
+  margin-top: 15px;
+}

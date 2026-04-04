@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+Medical-camp-frontend/node_modules/
+Medical-camp-backend/node_modules/
+
+# Inner git repos
+**/.git_bak/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+build/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

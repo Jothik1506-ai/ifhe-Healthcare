@@ -1,0 +1,198 @@
+.analytics-container {
+  background-color: #f5f5f5;
+  max-width: 800px;
+  margin: 35px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.analytics-container h1 {
+  color: #333;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 20px;
+}
+  
+.analytics-title {
+  color: #333;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.analytics-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.analytics-form-group {
+  margin-bottom: 15px;
+}
+
+.analytics-form-group label {
+  display: block;
+  margin-bottom: 3px;
+  color: #333;
+  font-weight: bold;
+}
+
+.analytics-form-group input[type="date"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.analytics-form-group input[type="month"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.analytics-submit-btn {
+  width: 100%;
+  background-color: #373737;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.analytics-submit-btn:hover {
+  background-color: #0c0c0c;
+}
+
+.analytics-results {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* ... existing styles ... */
+
+.gender-distribution {
+  margin-bottom: 40px;
+}
+
+.gender-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.stat-box {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 200px;
+}
+
+.stat-box h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.stat-box p {
+  font-size: 2rem;
+  margin: 0;
+  color: #373737;
+  font-weight: bold;
+}
+
+.age-distribution {
+  margin-top: 40px;
+}
+
+.age-distribution h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.analytics-error {
+  color: #721c24;
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #fb9ea6;
+  border-radius: 5px;
+}
+
+.required {
+  color: #e74c3c;
+  margin-left: 3px;
+}
+
+.error-input {
+  border-color: #e74c3c !important;
+  background-color: #fff8f8;
+}
+
+.field-error-message {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.month-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .analytics-container {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  .analytics-form {
+    max-width: 100%;
+    padding: 0 5px;
+  }
+
+  .gender-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .stat-box {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .analytics-submit-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .analytics-form-group input[type="date"],
+  .analytics-form-group input[type="month"] {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .analytics-results {
+    padding: 15px;
+  }
+}

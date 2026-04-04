@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #d6e8f5;
+  --card-bg: rgba(255, 255, 255, 0.72);
+  --card-border: rgba(255, 255, 255, 0.9);
+  --form-bg: rgba(178, 210, 235, 0.55);
+  --form-border: rgba(140, 185, 225, 0.6);
+  --input-bg: rgba(255, 255, 255, 0.85);
+  --input-border: #a8c8e4;
+  --input-focus: #2563eb;
+  --pill-active: #1e3a5f;
+  --pill-text: #1e3a5f;
+  --btn-bg: #1e3a5f;
+  --btn-hover: #2a4f80;
+  --title-color: #0f1f40;
+  --sub-color: #3a567a;
+  --link-color: #2563eb;
+  --shadow-card: 0 24px 60px rgba(30, 58, 95, 0.18), 0 4px 16px rgba(30, 58, 95, 0.10);
+  --shadow-btn: 0 4px 18px rgba(30, 58, 95, 0.35);
+  --radius-card: 28px;
+  --radius-form: 20px;
+  --radius-input: 12px;
+  --radius-pill: 50px;
+  --font: 'Inter', sans-serif;
+
+  /* Dashboard specific */
+  --sidebar-bg: #1e3a5f;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --text: #1a2a40;
+  --sub-text: #64748b;
+  --page-bg: #f4f8fb;
+  --white: #ffffff;
+  --border: #e2e8f0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Global Back Button Icon Styles */
+.back-icon-btn {
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 8px !important;
+  border-radius: 50% !important;
+  transition: background 0.2s !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 10px !important;
+  width: 40px !important;
+  height: 40px !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.back-icon-btn:hover {
+  background-color: rgba(0,0,0,0.06) !important;
+}
+
+.back-icon-btn svg {
+  width: 24px !important;
+  height: 24px !important;
+  fill: #555 !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}

@@ -1,0 +1,118 @@
+.vitals-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.vitals-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.2em;
+  font-weight: 700;
+}
+
+.vitals-success-msg {
+  background-color: #e6ffed;
+  color: #28a745;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid #28a745;
+}
+
+.vitals-error-msg {
+  background-color: #ffe6e6;
+  color: #dc3545;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid #dc3545;
+}
+
+.vitals-form-group {
+  margin-bottom: 20px;
+}
+
+.vitals-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #34495e;
+  font-weight: 600;
+  font-size: 1.05em;
+}
+
+.vitals-form-group input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vitals-form-group input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.vitals-submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #a0f0d0 0%, #b3e5fc 100%);
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.vitals-submit-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.vitals-submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Styling for the doctor assignment prompt and link */
+.doctor-assignment-prompt {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: none; /* Removed border */
+}
+
+.doctor-assignment-prompt p {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.doctor-assign-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #a0f0d0 0%, #b3e5fc 100%);
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.doctor-assign-link:hover {
+  background-color: #0056b3;
+}

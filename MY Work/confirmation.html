@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Action Confirmation – IFHE Healthcare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #d6e8f5;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --font: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font);
+            background: linear-gradient(135deg, #c2ddf3 0%, #deeef9 40%, #b5d4ed 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .confirmation-card {
+            background: var(--card-bg);
+            border-radius: 28px;
+            padding: 60px 48px;
+            text-align: center;
+            max-width: 500px;
+            box-shadow: 0 24px 60px rgba(30, 58, 95, 0.18);
+            animation: popIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .icon-wrapper {
+            width: 90px;
+            height: 90px;
+            background: #ecfdf5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            color: #10b981;
+        }
+
+        .title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0f1f40;
+            margin-bottom: 12px;
+            margin-top: 0;
+        }
+
+        .message {
+            color: #64748b;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2a5298 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 18px rgba(30, 58, 95, 0.35);
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(30, 58, 95, 0.42);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="confirmation-card">
+        <div class="icon-wrapper">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+        </div>
+
+        <h2 class="title">Action Successful!</h2>
+        <p class="message" id="confirmMessage">
+            The operation has been completed successfully. The patient's records are updated and securely saved.
+        </p>
+
+        <!-- Go back logic determines where out to go based on role -->
+        <a href="#" class="btn" onclick="javascript:goBack()">Return to Dashboard</a>
+    </div>
+
+    <script>
+        // Just simple logic to redirect appropriately
+        function goBack() {
+            const type = localStorage.getItem('userType');
+            if (type === 'admin') window.location.href = 'dashboard-admin.html';
+            else window.location.href = 'dashboard.html';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+.update-medicine-container {
+  background-color: #f5f5f5;
+  max-width: 560px;
+  margin: 35px auto;
+  padding: 20px 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  color: #000;
+}
+
+.update-medicine-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.update-medicine-error {
+  background-color: #fb9ea6;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.update-medicine-success {
+  background: #66bca15d;
+  color: #176101;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.medicine-id-form,
+.medicine-details {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 3px;
+  color: #333;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #000;
+}
+
+.update-medicine-container button {
+  background-color: #373737;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+  display: inline-block;
+  width: 100%;
+}
+
+.update-medicine-container button:hover {
+  background-color: #0c0c0c;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.medicine-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 20px 10px;
+  background-color: #f5f5f5;
+}
+
+.medicine-table th,
+.medicine-table td {
+  padding: 12px 0px;
+  text-align: center;
+  color: #000;
+}
+
+.medicine-table th {
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+
+.quantity-input {
+  width: 80px;
+  text-align: center;
+}
+
+.new-entry-form {
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.update-medicine-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.update-medicine-popup {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-medicine-close-popup {
+  width: 100%;
+  background-color: #373737;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.update-medicine-close-popup:hover {
+  background-color: #0c0c0c;
+}
+
+@media screen and (max-width: 600px) {
+  .update-medicine-container {
+    margin: 20px auto;
+    padding: 15px;
+    width: 90%;
+  }
+
+  .update-medicine-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .medicine-id-form,
+  .medicine-details {
+    max-width: 100%;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-group label {
+    font-size: 1rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .update-medicine-container button {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+  }
+
+  .medicine-table th,
+  .medicine-table td {
+    padding: 10px;
+  }
+
+  .quantity-input {
+    width: 60px;
+  }
+
+  .new-entry-form {
+    padding: 12px;
+    margin-top: 15px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .update-medicine-popup {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .update-medicine-close-popup {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}

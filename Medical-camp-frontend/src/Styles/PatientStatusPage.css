@@ -1,0 +1,68 @@
+.patient-status-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.patient-status-title {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.8rem;
+}
+
+.status-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.checklist-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.checklist-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.checklist-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.checklist-item.completed {
+  border-left: 5px solid #28a745; /* Green for completed */
+}
+
+.checklist-item.pending {
+  border-left: 5px solid #ffc107; /* Yellow/Orange for pending */
+}
+
+.error-message {
+  color: #dc3545;
+  text-align: center;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+}

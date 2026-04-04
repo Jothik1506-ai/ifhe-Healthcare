@@ -1,0 +1,331 @@
+#filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  gap: 10px;
+}
+
+#expired-filter {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #373737;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#expired-filter:checked {
+  background-color: #373737;
+  border-color: #373737;
+  position: relative;
+}
+
+#expired-filter:checked::after {
+  content: '✔';
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.expired-medicines-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 15px;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  color: #333;
+  margin: 0;
+}
+
+.back-button {
+  background-color: #373737;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.back-button:hover {
+  background-color: #0c0c0c;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #373737;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.no-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #7f8c8d;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.no-data-container i {
+  margin-bottom: 15px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.expired-medicines-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.expired-medicines-table th {
+  background-color: #33b48b;
+  color: white;
+  text-align: left;
+  padding: 12px 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.expired-medicines-table tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.expired-medicines-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.expired-medicines-table tr:hover {
+  background-color: #f1f5f9;
+}
+
+.expired-medicines-table td {
+  padding: 12px 15px;
+  vertical-align: top;
+}
+
+.medicine-id {
+  font-family: monospace;
+  color: #333;
+  width: 10%;
+  background-color: transparent;
+}
+
+.medicine-name {
+  font-weight: 600;
+  color: #333;
+  width: 20%;
+}
+
+.medicine-formulation {
+  color: #333;
+  width: 15%;
+}
+
+.expired-batches {
+  width: 35%;
+}
+
+.batch-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.batch-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.batch-expiry, .batch-quantity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.batch-expiry {
+  color: #e74c3c;
+}
+
+.batch-quantity {
+  color: #333;
+}
+
+.actions-cell {
+  width: 20%;
+  text-align: center;
+}
+
+.delete-batch-btn, .delete-medicine-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.delete-batch-btn {
+  background-color: #fb9ea6;
+  color: #721c24;
+}
+
+.delete-batch-btn:hover {
+  background-color: #f5c6cb;
+}
+
+.delete-medicine-btn {
+  background-color: #fb9ea6;
+  color: #721c24;
+  padding: 8px 16px;
+  margin: 0 auto;
+}
+
+.delete-medicine-btn:hover {
+  background-color: #f5c6cb;
+}
+
+/* Add Font Awesome icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .batch-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .delete-batch-btn {
+    align-self: flex-end;
+  }
+
+  /* Make table fully responsive */
+  .table-responsive {
+    overflow-x: hidden;
+  }
+
+  .expired-medicines-table,
+  .expired-medicines-table thead,
+  .expired-medicines-table tbody,
+  .expired-medicines-table th,
+  .expired-medicines-table td,
+  .expired-medicines-table tr {
+    display: block;
+  }
+
+  .expired-medicines-table thead tr {
+    /* hide header row */
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .expired-medicines-table tr {
+    margin: 0 0 1rem 0;
+    border: none;
+  }
+
+  .expired-medicines-table td {
+    /* add labels before each cell */
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    white-space: normal;
+  }
+
+  .expired-medicines-table td:before {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+  .expired-medicines-table td:nth-of-type(1):before { content: "ID"; }
+  .expired-medicines-table td:nth-of-type(2):before { content: "Formulation"; }
+  .expired-medicines-table td:nth-of-type(3):before { content: "Batch Details"; }
+  .expired-medicines-table td:nth-of-type(4):before { content: "Actions"; }
+
+  /* Tweak button sizing */
+  .toggle-availability-btn,
+  .delete-batch-btn,
+  .delete-medicine-btn {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}

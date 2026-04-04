@@ -1,0 +1,128 @@
+.add-medicine-page {
+  background-color: #f5f5f5;
+  max-width: 600px;
+  margin: 35px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  color: #000;
+}
+
+.add-medicine-page h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.add-medicine-error {
+  background-color: #fb9ea6;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.add-medicine-success {
+  background: #66bca15d;
+  color: #176101;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.add-medicine-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.add-medicine-group {
+  margin-bottom: 15px;
+}
+
+.add-medicine-group label {
+  display: block;
+  margin-bottom: 3px;
+  color: #333;
+  font-weight: bold;
+}
+
+.add-medicine-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.add-medicine-actions {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.add-medicine-cancel,
+.add-medicine-submit {
+  width: 100%;
+  background-color: #373737;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.add-medicine-cancel:hover,
+.add-medicine-submit:hover {
+  background-color: #0c0c0c;
+}
+
+@media screen and (max-width: 600px) {
+  .add-medicine-page {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  .add-medicine-form {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .add-medicine-group input {
+    font-size: 0.95rem;
+    padding: 7px;
+  }
+
+  .add-medicine-submit,
+  .add-medicine-cancel {
+    font-size: 0.95rem;
+    padding: 9px;
+  }
+}
+
+.required {
+  color: #e74c3c;
+  margin-left: 3px;
+}
+
+.error-input {
+  border-color: #e74c3c !important;
+  background-color: #fff8f8;
+}
+
+.field-error {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}

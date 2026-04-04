@@ -1,0 +1,148 @@
+.verification-container {
+  background-color: #fff;
+  max-width: 600px;
+  margin: 35px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.verification-card {
+  margin: 0px 100px;
+}
+
+.verification-title {
+  color: #333;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 3px;
+  color: #333;
+  font-weight: bold;
+}
+
+.form-group input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.btn-container {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.fetch-btn {
+  width: 100%;
+  background-color: #33b48b;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.fetch-btn:hover {
+  background-color: #2a9d7a;
+}
+
+.medicines-list {
+  margin-top: 20px;
+}
+
+.subheading {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.medicine-row {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.medicine-details {
+  margin-bottom: 8px;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .verification-container {
+    margin: 20px auto;
+    padding: 15px;
+    width: 90%;
+  }
+
+  .verification-card {
+    margin: 0px 20px;
+  }
+
+  .verification-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-group label {
+    font-size: 1rem;
+  }
+
+  .form-group input[type="text"] {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .fetch-btn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .medicines-list {
+    margin-top: 15px;
+  }
+
+  .medicine-row {
+    padding: 12px;
+  }
+
+  .medicine-details {
+    font-size: 1rem;
+  }
+
+  .error-message {
+    margin-top: 15px;
+  }
+
+  .subheading {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,535 @@
+.patient-registration-container {
+  background-color: #ffffff;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+}
+
+.patient-registration-title {
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+
+.registration-top-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.btn-toggle-search {
+  background-color: #f8f9fa;
+  color: #007bff;
+  border: 2px solid #007bff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+}
+
+.btn-toggle-search:hover {
+  background-color: #e7f1ff;
+}
+
+.btn-toggle-search.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.patient-search-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+.search-input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.search-filter-select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background-color: white;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.no-results-msg {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 10px;
+}
+
+.search-results-table-container {
+  overflow-x: auto;
+  margin-top: 15px;
+  max-height: 300px;
+}
+
+.search-results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.search-results-table th,
+.search-results-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.search-results-table th {
+  background-color: #eee;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
+.btn-select-patient {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.btn-select-patient:hover {
+  background-color: #218838;
+}
+
+.patient-registration-success-msg {
+  background: #d4edda;
+  color: #155724;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.patient-registration-error-msg {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.patient-registration-form {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.patient-registration-form-group {
+  margin-bottom: 20px;
+}
+
+.patient-registration-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #4a4a4a;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.patient-registration-form-group input[type="text"],
+.patient-registration-form-group input[type="number"],
+.patient-registration-form-group input[type="tel"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-color: #f9f9f9;
+}
+
+.patient-registration-form-group input:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Scan Button Styling */
+.scan-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  height: 45px;
+  /* Match input height roughly */
+  width: 45px;
+  flex-shrink: 0;
+}
+
+.scan-btn:hover {
+  background-color: #0056b3;
+}
+
+.scan-btn:active {
+  transform: scale(0.95);
+}
+
+.scan-btn svg {
+  fill: white;
+  width: 24px;
+  height: 24px;
+}
+
+.patient-registration-radio-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.patient-registration-radio-group label {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  color: #333;
+}
+
+.patient-registration-radio-group input[type="radio"] {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+  accent-color: #007bff;
+  cursor: pointer;
+}
+
+.area-input {
+  position: relative;
+}
+
+.suggestions-dropdown {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  background: white;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  list-style: none;
+  padding: 5px 0;
+  margin: 5px 0 0 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.suggestions-dropdown li {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #333;
+  transition: background 0.1s;
+}
+
+.suggestions-dropdown li:hover {
+  background: #f0f7ff;
+  color: #007bff;
+}
+
+.patient-registration-submit-btn {
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 25px;
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+}
+
+.patient-registration-submit-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px rgba(0, 123, 255, 0.3);
+}
+
+.patient-registration-submit-btn:disabled {
+  background-color: #a0c3e6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.required {
+  color: #dc3545;
+  margin-left: 4px;
+}
+
+.error-input {
+  border-color: #dc3545 !important;
+  background-color: #fff8f8 !important;
+}
+
+.field-error {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* Back Button - moved to global back-icon-btn */
+
+@media screen and (max-width: 600px) {
+  .patient-registration-container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 92%;
+    box-shadow: none;
+    border: none;
+    background-color: #fff;
+  }
+
+  .patient-registration-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .patient-registration-form-group input[type="text"],
+  .patient-registration-form-group input[type="number"],
+  .patient-registration-form-group input[type="tel"] {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .patient-registration-submit-btn {
+    padding: 14px;
+    font-size: 1rem;
+  }
+}
+
+/* Registration Success View */
+.registration-success-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.success-card {
+  background: #ffffff;
+  text-align: center;
+  width: 100%;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.registration-success-view h2 {
+  color: #28a745;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.patient-summary {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border: 1px solid #eee;
+}
+
+.patient-summary p {
+  margin: 12px 0;
+  color: #666;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.patient-summary p:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.patient-summary strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.registration-success-view .action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-register-next {
+  background-color: #007bff;
+  color: white;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  transition: all 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+}
+
+.btn-register-next:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #printable-qr,
+  #printable-qr * {
+    visibility: visible;
+  }
+
+  #printable-qr {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .simple-qr-view .action-buttons,
+  .back-icon-btn,
+  .patient-registration-title,
+  .patient-registration-success-msg {
+    display: none !important;
+  }
+}
+
+/* Chronic History Grid */
+.helper-text {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #666;
+  margin-left: 5px;
+}
+
+.chronic-history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #333;
+  line-height: 1.4;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: #007bff;
+  cursor: pointer;
+}
+
+.other-checkbox-label {
+  grid-column: 1 / -1;
+  /* Make 'Other' take full width */
+  align-items: center;
+}
+
+.other-history-input {
+  flex-grow: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  margin-left: 5px;
+}
+
+.other-history-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}

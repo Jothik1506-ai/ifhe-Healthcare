@@ -1,0 +1,134 @@
+.manual-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.manual-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.manual-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.manual-section {
+  margin-bottom: 3rem;
+}
+
+.manual-section h2 {
+  color: #2980b9;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+/* Workflow Diagram Styles */
+.workflow-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.workflow-step {
+  background-color: #fff;
+  border: 2px solid #3498db;
+  color: #2c3e50;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  width: 80%;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.workflow-arrow {
+  font-size: 1.5rem;
+  color: #7f8c8d;
+}
+
+/* Card Guide Styles */
+.manual-card-guide {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.manual-card-guide:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.manual-card-guide h3 {
+  background-color: #34495e;
+  color: #fff;
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content p {
+  margin-bottom: 0.8rem;
+}
+
+.card-content ul,
+.card-content ol {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.card-content li {
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.manual-footer {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #f1f2f6;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.manual-footer h3 {
+  color: #27ae60;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .manual-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .workflow-step {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}

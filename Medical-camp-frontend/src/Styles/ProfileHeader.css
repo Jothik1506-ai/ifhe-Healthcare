@@ -1,0 +1,162 @@
+.profile-header-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.profile-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-header-top h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.profile-common-info {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.profile-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  flex-grow: 1;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.info-value {
+  font-size: 16px;
+  color: #111827;
+  font-weight: 500;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #e0e7ff;
+  color: #4338ca;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.info-value.highlight {
+  color: #4f46e5;
+  font-weight: 700;
+}
+
+/* Action Buttons */
+.header-actions, .action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.edit-button, .save-button {
+  padding: 8px 24px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.edit-button {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #4338ca;
+}
+
+.save-button {
+  background-color: #059669;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #047857;
+}
+
+.delete-button, .cancel-button {
+  padding: 8px 24px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #fee2e2;
+  color: #dc2626;
+  border-color: #fca5a5;
+}
+
+.cancel-button:hover {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.empty-field {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .profile-common-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .profile-info-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .info-item {
+    align-items: center;
+  }
+}

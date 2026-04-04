@@ -1,0 +1,108 @@
+/* ════��═════════════════════════════════════════════════════
+   Profiles Management Page
+   ═══���══════════════════════��═══════════════════════════════ */
+
+.profiles-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: var(--font, 'Inter', sans-serif);
+}
+
+.profiles-header-section {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.profiles-header-section h1 {
+    font-size: 1.6rem;
+    color: #1a2a40;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.profiles-header-section p {
+    color: #64748b;
+    font-size: 0.92rem;
+}
+
+.profiles-tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.profile-tab {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 6px rgba(30, 58, 95, 0.04);
+    font-family: var(--font, 'Inter', sans-serif);
+}
+
+.profile-tab:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.profile-tab.active {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    color: white;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.tab-icon {
+    font-size: 1.1rem;
+}
+
+.profiles-content-area {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.profiles-content-area .doctor-container,
+.profiles-content-area #view-patients-container,
+.profiles-content-area .volunteer-container {
+    margin-top: 0;
+    box-shadow: none;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .profiles-page-container {
+        padding: 16px;
+    }
+
+    .profiles-tabs-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .profile-tab {
+        justify-content: center;
+    }
+}

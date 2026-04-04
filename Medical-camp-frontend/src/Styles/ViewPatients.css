@@ -1,0 +1,171 @@
+#view-patients-container {
+  background-color: #fff;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+#page-title {
+  text-align: center;
+  color: #000;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+#patients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.patient-card {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.patient-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.patient-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.patient-icon {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.patient-info {
+  text-align: center;
+}
+
+.patient-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000;
+  margin: 5px 0;
+}
+
+.patient-details {
+  font-size: 1rem;
+  color: #000;
+  margin-top: 3px;
+}
+
+.search-box {
+  margin-bottom: 25px;
+  width: 100%;
+  box-sizing: border-box;
+  /* This ensures padding doesn't add to the width */
+  max-width: 100%;
+  /* Ensures search box doesn't exceed container width */
+}
+
+.patient-search-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  /* Critical for ensuring padding is included in width calculation */
+}
+
+.patient-search-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+}
+
+.no-patients-found {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  color: #666;
+  font-style: italic;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.pagination-btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.pagination-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  #patients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #patients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-box {
+    padding: 0 5px;
+    /* Add some padding on very small screens */
+  }
+
+  .patient-search-input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .pagination-container {
+    gap: 10px;
+  }
+
+  .pagination-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volunteer Dashboard – IFHE Healthcare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        /* ── Reset & Base ─────────────────────────────────────────── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #f4f8fb;
+            --sidebar-bg: #1e3a5f;
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --text: #1a2a40;
+            --sub-text: #64748b;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --font: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font);
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ── Sidebar ──────────────────────────────────────────────── */
+        .sidebar {
+            width: 260px;
+            background: var(--sidebar-bg);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 32px 24px;
+            box-shadow: 4px 0 24px rgba(30, 58, 95, 0.1);
+            z-index: 10;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+
+        .brand-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #1e3a5f, #2563eb);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+        }
+
+        .brand-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .nav-item {
+            padding: 12px 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 500;
+            color: #a8c8e4;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .nav-item.active {
+            background: var(--primary);
+        }
+
+        .logout-btn {
+            margin-top: auto;
+            background: rgba(239, 68, 68, 0.1);
+            color: #f87171;
+            padding: 12px 16px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .logout-btn:hover {
+            background: #ef4444;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+        }
+
+        /* ── Main Content ─────────────────────────────────────────── */
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .greeting h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--sidebar-bg);
+            margin-bottom: 4px;
+        }
+
+        .greeting p {
+            color: var(--sub-text);
+            font-size: 0.95rem;
+        }
+
+        /* ── Grid/Cards ───────────────────────────────────────────── */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 4px 16px rgba(30, 58, 95, 0.05);
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(30, 58, 95, 0.1);
+            border-color: #a8c8e4;
+        }
+
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            background: #eef2ff;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--sidebar-bg);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--sub-text);
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        .card-action {
+            margin-top: 12px;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-action svg {
+            transition: transform 0.2s;
+        }
+
+        .card:hover .card-action svg {
+            transform: translateX(4px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 20px;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .nav-list {
+                display: none;
+            }
+
+            .brand {
+                margin-bottom: 0;
+            }
+
+            .logout-btn {
+                margin-top: 0;
+                padding: 8px 16px;
+            }
+
+            .main-content {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">
+                <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="2" width="6" height="22" rx="2" fill="white" />
+                    <rect x="2" y="10" width="22" height="6" rx="2" fill="white" />
+                </svg>
+            </div>
+            <div class="brand-name">IFHE</div>
+        </div>
+        <ul class="nav-list">
+            <li class="nav-item active">Dashboard</li>
+            <li class="nav-item">Patient Connect</li>
+            <li class="nav-item">Vitals Entry</li>
+            <li class="nav-item">Pharmacy</li>
+            <li class="nav-item">Settings</li>
+        </ul>
+        <div class="logout-btn" onclick="logout()">Log Out</div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="header">
+            <div class="greeting">
+                <h1>Welcome, <span id="userNameDisplay">Volunteer</span>!</h1>
+                <p id="dateDisplay">Ready to assist patients today?</p>
+            </div>
+        </header>
+
+        <div class="grid">
+            <!-- Card 1 -->
+            <div class="card" onclick="window.location.href='confirmation.html'">
+                <div class="card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <line x1="19" y1="8" x2="19" y2="14" />
+                        <line x1="22" y1="11" x2="16" y2="11" />
+                    </svg>
+                </div>
+                <div class="card-title">Patient Registration</div>
+                <div class="card-desc">Register new patients, assign IDs, and get them started with their health
+                    checkup.</div>
+                <div class="card-action">
+                    Start Registration
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg>
+                </div>
+                <div class="card-title">Enter Vitals</div>
+                <div class="card-desc">Record BP, heart rate, temperature, and other immediate vitals for queued
+                    patients.</div>
+                <div class="card-action">
+                    Record Vitals
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10 9 9 9 8 9" />
+                    </svg>
+                </div>
+                <div class="card-title">View Queue & Assign</div>
+                <div class="card-desc">Manage patient flow, monitor doctor availability, and assign beds/rooms.</div>
+                <div class="card-action">
+                    Manage Queue
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Set date dynamically
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('dateDisplay').textContent = new Date().toLocaleDateString(undefined, options);
+
+        // Initial load check
+        document.addEventListener("DOMContentLoaded", () => {
+            const token = localStorage.getItem('authToken');
+            const userType = localStorage.getItem('userType');
+            const userName = localStorage.getItem('userName');
+
+            if (!token) {
+                // Fallback to login if accessed directly
+                window.location.href = 'login.html';
+            }
+
+            if (userName) {
+                document.getElementById('userNameDisplay').textContent = userName;
+            }
+        });
+
+        function logout() {
+            localStorage.clear();
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+
+</html>

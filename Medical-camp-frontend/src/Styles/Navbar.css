@@ -1,0 +1,221 @@
+/* ══════════════════════════════════════════════════════════
+   Navbar — Professional medical system navigation
+   ══════════════════════════════════════════════════════════ */
+
+.navbar {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2a5a8f 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 52px;
+  box-shadow: 0 2px 12px rgba(30, 58, 95, 0.18);
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 34px;
+  width: auto;
+  filter: brightness(1.1);
+}
+
+/* Group containing all links + menu icon */
+.nav-group {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* Desktop inline links */
+.desktop-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+}
+
+.desktop-links li a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.desktop-links li a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+/* Mobile dropdown */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background: #1e3a5f;
+}
+
+.nav-links li a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-links li a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hamburger */
+.menu-icon {
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 12px;
+  padding: 4px 10px;
+  transition: background 0.2s;
+}
+
+.menu-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Desktop-only dropdown */
+.desktop-menu {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  display: none;
+  position: absolute;
+  top: 52px;
+  right: 0;
+  width: 220px;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 8px 24px rgba(30, 58, 95, 0.15);
+  z-index: 100;
+  border: 1px solid #e2e8f0;
+  border-top: 2px solid #2563eb;
+}
+
+.desktop-menu.open {
+  display: flex;
+}
+
+.desktop-menu li {
+  margin: 0;
+}
+
+.desktop-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #1a2a40;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.88rem;
+  transition: background 0.15s, color 0.15s;
+}
+
+.desktop-menu li a:hover {
+  background: #f0f6ff;
+  color: #2563eb;
+}
+
+/* Logout button */
+.logout-container {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+
+.logout-btn {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-weight: 600;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font, 'Inter', sans-serif);
+}
+
+.logout-btn:hover {
+  background: #ef4444;
+  color: #fff;
+  border-color: #ef4444;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* ── Responsive: mobile ≤768px ──────────────────────────── */
+@media (max-width: 768px) {
+  .navbar {
+    height: 48px;
+    padding: 0 16px;
+  }
+
+  /* Hide desktop inline & desktop dropdown */
+  .desktop-links { display: none; }
+  .desktop-menu  { display: none !important; }
+
+  /* Mobile nav-links behavior */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #1e3a5f;
+    padding: 8px 0;
+    box-shadow: 0 8px 24px rgba(30, 58, 95, 0.2);
+    z-index: 100;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .logo-img {
+    height: 28px;
+  }
+
+  .logout-btn {
+    padding: 5px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Hide mobile nav-links on desktop */
+@media (min-width: 769px) {
+  .nav-links {
+    display: none !important;
+  }
+}

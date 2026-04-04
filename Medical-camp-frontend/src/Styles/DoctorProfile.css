@@ -1,0 +1,330 @@
+.doctor-profile-container {
+  background-color: #fff;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.doctor-profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.doctor-profile-header h1 {
+  color: #000;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.edit-button, .save-button, .cancel-button, .back-button, .delete-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.edit-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #2980b9;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  margin-left: 8px;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.header-actions {
+  display: flex;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.save-button {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #27ae60;
+}
+
+.save-button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.cancel-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #c0392b;
+}
+
+.doctor-profile-card {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.doctor-avatar-large {
+  width: 80px;
+  height: 80px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0 auto 20px;
+}
+
+.doctor-profile-card h2 {
+  color: #000;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.doctor-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.doctor-detail {
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+}
+
+.doctor-detail strong {
+  width: 130px;
+  color: #555;
+}
+
+.doctor-detail span {
+  flex-grow: 1;
+}
+
+.doctor-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.form-control {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.nav-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.back-button {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.back-button:hover {
+  background-color: #ddd;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  color: #666;
+}
+
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+.nav-actions .back-button-spacing {
+  margin-left: 10px; /* Adjust the spacing as needed */
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #e74c3c;
+}
+
+.error-input {
+  border-color: #e74c3c !important;
+  background-color: #fff8f8;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.required {
+  color: #e74c3c;
+}
+
+.doctor-analytics-section {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.analytics-title {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.visit-count {
+  background-color: #3498db;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.visit-count span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.visit-timeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.visit-entry {
+  background-color: #f8f9fa;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #2c3e50;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.visit-entry:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .doctor-profile-container {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  .doctor-profile-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .doctor-profile-card {
+    padding: 20px;
+  }
+  
+  .doctor-detail {
+    flex-direction: column;
+  }
+  
+  .doctor-detail strong {
+    width: auto;
+    margin-bottom: 5px;
+  }
+  
+  .action-buttons {
+    width: 100%;
+  }
+  
+  .edit-button, .save-button, .cancel-button {
+    flex: 1;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Add this to your existing CSS */
+.empty-field {
+  color: #999;
+  font-style: italic;
+}
